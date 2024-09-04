@@ -1,0 +1,276 @@
+﻿/* styles.css */
+
+/* Define the color for the mask icon */
+link[rel="mask-icon"] {
+  color: #5bbad5;
+}
+
+/* Style for the warning modal */
+.warning_modal_out {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.warning_modal_in {
+  background: yellow;
+  border: 2px solid red;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  color: black;
+  text-align: center;
+  position: relative;
+}
+
+.modal_close {
+  cursor: pointer;
+  color: red;
+  font-size: 1.5em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal_close i {
+  margin: 0;
+}
+
+.warning_modal_in a.app_button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.warning_modal_out {
+  display: none; /* Modal başlangıçta gizli olmalı */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Arka plan rengi */
+  z-index: 9999;
+}
+
+.warning_modal_in {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal_close {
+  cursor: pointer;
+}
+.centered-content {
+  display: flex;
+  flex-direction: column; /* Keeps items in a vertical stack */
+  align-items: center; /* Horizontally centers the content */
+  text-align: center; /* Centers text inside its container */
+  color: #ededed;
+}
+
+.chat_footer_item {
+  display: flex;
+  flex-direction: column; /* Align icon and text in a column */
+  align-items: center; /* Centers icon and text horizontally */
+  margin-top: 20px; /* Add space if needed */
+  cursor: pointer;
+}
+
+.chat_footer_item p {
+  margin: 0; /* Remove default margin for proper spacing */
+}
+.password-toggle-container {
+            position: relative;
+            width: 100%;
+        }
+
+/* Giriş Formu */
+#login_form_box {
+    width: 100%; /* Tam genişlikte */
+    max-width: 800px; /* Maksimum genişlik */
+    margin: 0 auto; /* Ortala */
+    padding: 5px; /* İç boşluk */
+}
+
+/* Form Grupları */
+.form-group {
+    margin-bottom: 15px; /* Aşağı boşluk */
+}
+
+/* Kullanıcı Adı ve Şifre Inputları */
+.user_username, .full_input {
+    /* width: 100%; */ /* Sağa ve sola %100 genişlik */
+    /* padding: 14px; */ /* İç boşluk */
+    /* border: 2px solid #34495e; */ /* Belirgin sınır */
+    /* border-radius: 8px; */ /* Köşe yuvarlaklığı */
+    background: #ffffff; /* Koyu mavi arka plan */
+    color: #000000; /* Beyaz metin */
+    box-sizing: border-box; /* Padding ve border toplam genişliği etkilemez */
+}
+
+/* Şifre Toggle Container */
+.password-toggle-container {
+    position: relative; /* Toggle butonunu input içinde doğru konumlandırmak için */
+}
+
+/* Şifre Toggle Butonu */
+.password-toggle-btn {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* right: 10px; */ /* Sağ kenardan 10px uzaklık */
+    /* transform: translateY(-50%); */ /* Yükseklik merkezleme */
+    /* background: transparent; */
+    /* border: none; */
+    /* cursor: pointer; */
+    /* color: #cc701e; */ /* Beyaz renk */
+    /* font-size: 18px; */ /* Font boyutu */
+    /* z-index: 2; */ /* Input üzerine çıkması için */
+}
+
+/* Şifre Toggle İkonları */
+.password-toggle-btn i {
+    pointer-events: none; /* Butona tıklanamazlık ekleme */
+}
+
+
+        .password-toggle-btn {
+            position: absolute;
+            right: 10px; /* Adjust positioning */
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 18px; /* Adjust size as needed */
+            color: #cc701e;
+        }
+
+        .password-toggle-btn i {
+            color: inherit; /* Inherit color from parent, keeps original icon color */
+        }
+.button-like {
+    display: inline-flex; /* Fit content */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content horizontally */
+    /* background-color: #007bff; */ /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for button look */
+    padding: 10px 20px; /* Padding to make it look like a button */
+    color: white; /* White text and icon color */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    font-size: 14px; /* Adjust font size */
+    font-family: inherit; /* Inherit font settings */
+    text-decoration: none; /* Remove underline from text */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    box-shadow: 0 2px 5px #3F51B5; /* Add subtle shadow */
+    position: relative; /* Position relative for alignment adjustments */
+}
+
+.button-like:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.button-like i {
+    margin-bottom: 2px; /* Space between icon and text */
+    font-size: 16px; /* Icon size */
+}
+
+.button-like span {
+    display: block; /* Ensures text behaves as a block for vertical alignment */
+    margin: 0; /* Remove any default margins */
+}
+/* HR Çizgisi Stili */
+hr {
+    border: 0; /* Sınırı kaldırır */
+    height: 1px; /* Çizginin yüksekliği */
+    background: #ffffff; /* Çizginin rengi */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    margin: 20px 0; /* Üst ve alt boşluk */
+    max-width: 100%; /* Ekranın genişliğine uyum sağlar */
+    width: 100%; /* Tam genişlikte olmasını sağlar */
+}
+/* styles.css */
+
+/* Genel Stil */
+.section_intro_footer {
+    text-align: justify; /* Yazıları iki yana yaslar */
+    margin: 2em auto;
+}
+
+
+.section_intro_footer h2,
+.section_intro_footer h3,
+.section_intro_footer h4,
+.section_intro_footer h5 {
+    margin-bottom: 0.5em;
+}
+
+.section_intro_footer h2 {
+    font-size: 2em;
+}
+
+.section_intro_footer h3 {
+    font-size: 1.75em;
+}
+
+.section_intro_footer h4 {
+    font-size: 1.5em;
+}
+
+.section_intro_footer h5 {
+    font-size: 1.25em;
+}
+
+.section_intro_footer p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 2em;
+}
+
+/* Container ve Görünüm Ayarları */
+.page_element {
+    text-align: center;
+}
+
+.section_content {
+    padding: 1em;
+}
+
+.section_inside {
+    padding: 1em;
+}
+
+.intro_footer img {
+    width: 240px;
+    height: 76px;
+}
+
+.intro_footer .cta-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.3em;
+}
+
+.intro_footer .cta-button:hover {
+    background-color: #0056b3;
+}
