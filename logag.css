@@ -1,0 +1,189 @@
+/* Genel Arka Plan Renkleri */
+.top_background, .background_header, .chat_head, .chat_footer, .panel_top, .emo_head, .modal_top {
+    background: linear-gradient(135deg, #2c3e50 0%, #e74c3c 100%); /* Koyu mavi ve kÃƒâ€žÃ‚Â±rmÃƒâ€žÃ‚Â±zÃƒâ€žÃ‚Â± geÃƒÆ’Ã‚Â§iÃƒâ€¦Ã…Â¸i */
+    color: #ffffff;
+}
+body {
+    background: #000000; /* Tam siyah arka plan rengi */
+/* Arka Plan Kutusu */
+}
+
+.background_box {
+    background: #1e1e1e; /* Koyu gri arka plan */
+    color: #e0e0e0; /* AÃƒÆ’Ã‚Â§Ãƒâ€žÃ‚Â±k gri metin */
+}
+
+/* GiriÃƒâ€¦Ã…Â¸ ve Login SayfasÃƒâ€žÃ‚Â± */
+#intro_top {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    height: auto;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#login_wrap {
+    width: 100%;
+    height: 100%;
+}
+
+#login_all {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.8); /* Daha koyu Ãƒâ€¦Ã…Â¸effaf arka plan */
+    padding: 20px;
+}
+
+/* ÃƒÆ’Ã…â€œye Olmayanlar Ãƒâ€žÃ‚Â°ÃƒÆ’Ã‚Â§in Bilgilendirme */
+.login_not_member {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #ccc; /* AÃƒÆ’Ã‚Â§Ãƒâ€žÃ‚Â±k gri renk */
+}
+
+/* BÃƒÆ’Ã‚Â¶lÃƒÆ’Ã‚Â¼m ve Ãƒâ€žÃ‚Â°ÃƒÆ’Ã‚Â§erik Stilleri */
+.section {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section_content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section_inside {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1120px) {
+    .section_inside {
+        width: 96%;
+    }
+}
+
+@media screen and (min-width: 1121px) {
+    #intro_top {
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #intro_top {
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #intro_top {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* UyarÃƒâ€žÃ‚Â± MesajlarÃƒâ€žÃ‚Â± */
+.chat-user-alert .alert-warning {
+    padding: 5px;
+    background-color: #000000; /* Koyu mavi arka plan */
+    /* color: #ffffff; */ /* Beyaz metin */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Stilleri */
+.dt_login {
+    width: 100%;
+    max-width: 450px;
+    background: #e67e22; /* Koyu mavi arka plan */
+    /* color: #ffffff; */ /* Beyaz metin rengi */
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* border-radius: 15px; */
+    margin: 0 auto;
+    padding: 4px;
+}
+
+/* Genel Eleman Stilleri */
+.element_color, .player_options, .page_element, #private_box, .chat_side_panel, #side_menu, .modal_in {
+    background: #ededed; /* Koyu gri arka plan */
+    color: #000000; /* AÃƒÆ’Ã‚Â§Ãƒâ€žÃ‚Â±k gri metin */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* span#login_select_genderSelectBoxItText Stili */
+span#login_select_genderSelectBoxItText {
+    color: #444444; /* Biraz daha aÃƒÆ’Ã‚Â§Ãƒâ€žÃ‚Â±k koyu gri renk */
+}
+
+
+span#login_select_genderSelectBoxItText {
+    /* color: #e0e0e0; */ /* AÃƒÆ’Ã‚Â§Ãƒâ€žÃ‚Â±k gri metin rengi */
+}
+
+a:hover {
+    color: #f1c40f; /* BaÃƒâ€žÃ…Â¸lantÃƒâ€žÃ‚Â±lar iÃƒÆ’Ã‚Â§in hover efekti (sarÃƒâ€žÃ‚Â±) */
+}
+/* .theme_btn Stilleri */
+.theme_btn {
+    background: #e74c3c; /* VarsayÃƒâ€žÃ‚Â±lan kÃƒâ€žÃ‚Â±rmÃƒâ€žÃ‚Â±zÃƒâ€žÃ‚Â± arka plan */
+    border: none; /* SÃƒâ€žÃ‚Â±nÃƒâ€žÃ‚Â±r yok */
+    border-radius: 8px; /* Belirgin kÃƒÆ’Ã‚Â¶Ãƒâ€¦Ã…Â¸e yuvarlaklÃƒâ€žÃ‚Â±Ãƒâ€žÃ…Â¸Ãƒâ€žÃ‚Â± */
+    padding: 12px 20px; /* Ãƒâ€žÃ‚Â°ÃƒÆ’Ã‚Â§ boÃƒâ€¦Ã…Â¸luk */
+    margin-bottom: 15px; /* Alt boÃƒâ€¦Ã…Â¸luk */
+    cursor: pointer; /* Ãƒâ€žÃ‚Â°mleÃƒÆ’Ã‚Â§ deÃƒâ€žÃ…Â¸iÃƒâ€¦Ã…Â¸tirme efekti */
+    font-size: 16px; /* Font boyutu */
+    transition: background 0.3s, box-shadow 0.3s; /* GeÃƒÆ’Ã‚Â§iÃƒâ€¦Ã…Â¸ efekti */
+    color: #ffffff; /* Beyaz metin */
+}
+
+.theme_btn:hover {
+    background: #c0392b; /* Hover durumunda mavi arka plan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hafif gÃƒÆ’Ã‚Â¶lge efekti */
+}
+
+/* GiriÃƒâ€¦Ã…Â¸ ve Textarea Stilleri */
+input, textarea {
+    background: #2c3e50; /* Koyu mavi arka plan */
+    /* border: 2px solid #34495e; */ /* Daha belirgin mavi sÃƒâ€žÃ‚Â±nÃƒâ€žÃ‚Â±r */
+    color: #ededed; /* Beyaz metin rengi */
+    /* Belirgin kÃƒÆ’Ã‚Â¶Ãƒâ€¦Ã…Â¸e yuvarlaklÃƒâ€žÃ‚Â±Ãƒâ€žÃ…Â¸Ãƒâ€žÃ‚Â± */
+}
+
+/* GiriÃƒâ€¦Ã…Â¸ Buton Stilleri */
+button, input[type="submit"] {
+    /* background: #e74c3c; */ /* KÃƒâ€žÃ‚Â±rmÃƒâ€žÃ‚Â±zÃƒâ€žÃ‚Â± arka plan */
+    /* border: none; */
+    /* border-radius: 8px; */ */ /* Belirgin kÃƒÆ’Ã‚Â¶Ãƒâ€¦Ã…Â¸e yuvarlaklÃƒâ€žÃ‚Â±Ãƒâ€žÃ…Â¸Ãƒâ€žÃ‚Â± */
+    /* padding: 12px 20px; */
+    margin-bottom: 15px; */
+    /* cursor: pointer; */
+    /* font-size: 16px; */
+    /* transition: background 0.3s, box-shadow 0.3s; */
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #c0392b; /* Daha koyu kÃƒâ€žÃ‚Â±rmÃƒâ€žÃ‚Â±zÃƒâ€žÃ‚Â± arka plan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hafif gÃƒÆ’Ã‚Â¶lge efekti */
+}
+
+/* HR ÃƒÆ’Ã¢â‚¬Â¡izgisi Stili */
+hr {
+    border: 0; /* SÃƒâ€žÃ‚Â±nÃƒâ€žÃ‚Â±rÃƒâ€žÃ‚Â± kaldÃƒâ€žÃ‚Â±rÃƒâ€žÃ‚Â±r */
+    height: 1px; /* ÃƒÆ’Ã¢â‚¬Â¡izginin yÃƒÆ’Ã‚Â¼ksekliÃƒâ€žÃ…Â¸i */
+    background: #e0e0e0; /* ÃƒÆ’Ã¢â‚¬Â¡izginin rengi */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Hafif gÃƒÆ’Ã‚Â¶lge */
+    margin: 20px 0; /* ÃƒÆ’Ã…â€œst ve alt boÃƒâ€¦Ã…Â¸luk */
+    max-width: 100%; /* EkranÃƒâ€žÃ‚Â±n geniÃƒâ€¦Ã…Â¸liÃƒâ€žÃ…Â¸ine uyum saÃƒâ€žÃ…Â¸lar */
+    width: 100%; /* Tam geniÃƒâ€¦Ã…Â¸likte olmasÃƒâ€žÃ‚Â±nÃƒâ€žÃ‚Â± saÃƒâ€žÃ…Â¸lar */
+}
