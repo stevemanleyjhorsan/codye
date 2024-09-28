@@ -609,8 +609,8 @@ ow
 .cclear, .spclear, .tpclear { display:table-cell; width:24px; font-size:10px; vertical-align:middle; text-align:center; cursor:pointer; }
 .cdate { display:table-cell; width:65px; font-size:10px; vertical-align:middle; text-align:center; }
 .cname { display:table-cell; vertical-align:middle; }
-.chat_rank {display: inline-block;width: auto;height: 12px;margin: 0 3px 0 0;}
-.chat_ghost { display: inline-block; width: auto; height: 11px; margin: 0 3px 0 0; }
+.chat_rank { display: inline-block; width: auto; height: 30px; margin: 0 3px 0 0; }
+.chat_ghost { display: inline-block; width: auto; height: 30px; margin: 0 3px 0 0; }
 .special_delete { font-size:13px; position:absolute; top:0; right:0; padding:5px; }
 .emo_chat { height:24px; max-width:100%; vertical-align:bottom; }
 .sticker_chat { height:80px; max-width:100%; vertical-align:bottom; }
