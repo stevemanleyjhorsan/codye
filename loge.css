@@ -162,9 +162,9 @@ input, textarea {
 
 /* GiriÃƒâ€¦Ã…Â¸ Buton Stilleri */
 button, input[type="submit"] {
-    background: #e74c3c00; /* KÃƒâ€žÃ‚Â±rmÃƒâ€žÃ‚Â±zÃƒâ€žÃ‚Â± arka plan */
+    /* background: #e74c3c00; */ /* KÃƒâ€žÃ‚Â±rmÃƒâ€žÃ‚Â±zÃƒâ€žÃ‚Â± arka plan */
     /* border: none; */
-    /* border-radius: 8px; */ */ /* Belirgin kÃƒÆ’Ã‚Â¶Ãƒâ€¦Ã…Â¸e yuvarlaklÃƒâ€žÃ‚Â±Ãƒâ€žÃ…Â¸Ãƒâ€žÃ‚Â± */
+    border-radius: 10px; */ /* Belirgin kÃƒÆ’Ã‚Â¶Ãƒâ€¦Ã…Â¸e yuvarlaklÃƒâ€žÃ‚Â±Ãƒâ€žÃ…Â¸Ãƒâ€žÃ‚Â± */
     /* padding: 12px 20px; */
     margin-bottom: 15px; */
     /* cursor: pointer; */
@@ -173,7 +173,7 @@ button, input[type="submit"] {
 }
 
 button:hover, input[type="submit"]:hover {
-    background: #ffffff; /* Daha koyu kÃƒâ€žÃ‚Â±rmÃƒâ€žÃ‚Â±zÃƒâ€žÃ‚Â± arka plan */
+    /* background: #ffffff; */ /* Daha koyu kÃƒâ€žÃ‚Â±rmÃƒâ€žÃ‚Â±zÃƒâ€žÃ‚Â± arka plan */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */ /* Hafif gÃƒÆ’Ã‚Â¶lge efekti */
 }
 
