@@ -7,7 +7,7 @@ body {
     background: #000000; /* Tam siyah arka plan rengi */
 /* Arka Plan Kutusu */
 }
-
+.back_box { background:#fff; }
 .background_box {
     background: #1e1e1e; /* Koyu gri arka plan */
     color: #e0e0e0; /* AÃƒÆ’Ã‚Â§Ãƒâ€žÃ‚Â±k gri metin */
@@ -187,3 +187,4 @@ hr {
     max-width: 100%; /* EkranÃƒâ€žÃ‚Â±n geniÃƒâ€¦Ã…Â¸liÃƒâ€žÃ…Â¸ine uyum saÃƒâ€žÃ…Â¸lar */
     width: 100%; /* Tam geniÃƒâ€¦Ã…Â¸likte olmasÃƒâ€žÃ‚Â±nÃƒâ€žÃ‚Â± saÃƒâ€žÃ…Â¸lar */
 }
+
