@@ -36,12 +36,6 @@ textarea,
    BUTTON COLORS
 ========================================================= */
 
-.theme_btn,
-.back_theme {
-    background: #03add8;
-    color: #fff;
-}
-
 .default_btn,
 .back_default {
     background: #222;
