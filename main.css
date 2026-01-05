@@ -107,6 +107,12 @@ input { font-family: sans-serif,'trebuchet ms','lucida grande','lucida sans unic
 /* console css */
 .console_date { width:65px; display:table-cell; vertical-align:top; font-size:11px; }
 
+/* date selector */
+.date_form { display: flex; gap: 8px; }
+.date_col { flex: 1; min-width: 0; }
+.date_month { flex: 2; }
+.date_col > * { width: 100%; }
+
 /* listing element */
 .listing_element { padding:15px 10px; }
 .listing_half_element { padding:15px 10px; width:calc(50% - 10px); float:left; margin:0 5px; }
@@ -344,6 +350,7 @@ input { font-family: sans-serif,'trebuchet ms','lucida grande','lucida sans unic
 .fmenu_gimg img, .fmenu_timg img, .fmenu_aimg img, .fmenu_himg img, .fmenu_img img, .fmenu_simg img { width:30px; height:30px; margin:0 auto; display:block; border-radius:5px; }
 .fmenu_text { display:table-cell; vertical-align:middle; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:initial; padding:0 5px; }
 .fmenu_otext { display:table-cell; vertical-align:middle; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:initial; }
+.fnotify { width:12px; height:12px; border-radius:50%; display:none; }
 .fmenut { padding:10px; }
 .fmuser { padding:10px; }
 .fmenuxt { padding:5px; }
@@ -372,6 +379,7 @@ input { font-family: sans-serif,'trebuchet ms','lucida grande','lucida sans unic
 #leaderboard_menu, #game_menu, #tool_menu, #app_menu, #store_menu, #help_menu { position:absolute; left:50px; top:50px; z-index:202; display:none; text-align:initial; }
 #chat_main_menu, #status_menu, #report_menu, #notification_menu, #bank_menu, #room_options_menu, #setting_menu, 
 #friends_menu, #private_menu { position:absolute; right:0; z-index:202; top:50px; display:none; text-align:initial; }
+#chat_left_menu { position:absolute; left:0px; top:50px; z-index:202; display:none; text-align:initial; }
 
 /* menus width */
 #private_opt { width:200px; }
@@ -393,6 +401,7 @@ input { font-family: sans-serif,'trebuchet ms','lucida grande','lucida sans unic
 #private_menu { width:320px; }
 #station_menu { width:320px; }
 #player_menu { width:320px; }
+#chat_left_menu { width:300px; }
 
 /* avatar menu */
 #av_menu { width:240px; height:auto; position:absolute; bottom:0; left:-5000px; z-index:99; border-radius:20px; overflow:hidden; cursor:pointer; }
@@ -621,7 +630,9 @@ input { font-family: sans-serif,'trebuchet ms','lucida grande','lucida sans unic
 .nogranted { display:none !important }
 
 /* chat logs css */
-.ch_logs { padding:5px 10px; word-wrap: break-word; display:table; width:100%; table-layout:fixed; max-width:100%; overflow:hidden; cursor:pointer; }
+.ch_logs { padding:5px 10px; word-wrap: break-word; display:table; width:100%; table-layout:fixed; max-width:100%; overflow:hidden; cursor:pointer; line-height:1.5; }
+.ch_tlogs { padding:8px 10px; }
+.ch_dlogs { padding:8px 10px; }
 .other_logs{ padding:10px; word-wrap: break-word; display:table; width:100%; table-layout:fixed; max-width:100%; overflow:hidden; }
 .chat_avatar { display:table-cell; width:40px; vertical-align:top; position:relative; }
 .cavatar  { height:40px; width:40px; border-radius:50%; display:block; overflow:hidden; cursor:pointer; }
@@ -642,10 +653,13 @@ input { font-family: sans-serif,'trebuchet ms','lucida grande','lucida sans unic
 .custom_chat { max-height:200px; max-width:400px; }
 .chat_system { font-size:12px; }
 .sysname { font-weight:bold; }
+.chat_message { display: flex; align-items: stretch; justify-content: space-between; max-width: 100%; }
+.chat_tmessage { max-width: min(1100px, calc(100% - 30px)); }
+.bubble { display: inline-block; padding: 8px 12px; border-radius: 12px; white-space: pre-wrap; word-wrap: break-word; max-width:min(1100px, calc(100% - 40px)); }
+
+/* topic */
 .topic_icon { display:table-cell; width:40px; vertical-align:top; position:relative; }
 .tpicon  { height:40px; width:40px; border-radius:50%; display:block; overflow:hidden; cursor:pointer; }
-.chat_message { display: flex; align-items: stretch; justify-content: space-between; max-width: 100%; }
-.bubble { display: inline-block; padding: 8px 12px; border-radius: 12px; white-space: pre-wrap; word-wrap: break-word; max-width: calc(100% - 40px); }
 .topic_log { margin-top:10px; }
 
 /* system logs */
@@ -1100,6 +1114,7 @@ canvas#view { width: 100%; height: 100%; display:block; }
 .avatar_preview img { width:20px; height:20px; border-radius:50%; display:block; }
 .content_preview { padding:1px 5px; font-size:8px !important; vertical-align:middle; }
 .preview_bubble { padding:3px; border-radius:5px; display:inline-block; margin-top:1px; }
+.preview_tlogs { padding:3px 0px; display:inline-block; margin-top:1px; }
 .preview_author { display:inline-block; position:absolute; bottom:5px; left:10px; font-size:9px; padding:3px 6px; border-radius:5px; z-index:202; }
 
 /* private typing */
@@ -1125,7 +1140,7 @@ canvas#view { width: 100%; height: 100%; display:block; }
 .psub_options  img { width:100%; height:auto; }
 
 /* emoticon panels */
-#main_emoticon { width:530px; max-width:calc(100% - 10px); border-radius:15px; height:222px; position:absolute; bottom:0; left:0; z-index:100; display:none; margin:5px; }
+#main_emoticon { width:530px; max-width:calc(100% - 10px); border-radius:15px; height:222px; position:absolute; bottom:0; left:0; z-index:100; display:none; margin:5px; overflow:hidden; }
 #private_emoticon { width:calc(100% - 10px); border-radius:5px; height:200px; position:absolute; bottom:0; left:0; z-index:100; display:none; margin:5px; }
 .emo_head { width:100%; height:40px; display:table; table-layout:fixed; }
 .emo_content { width:100%; height:180px; overflow:hidden; overflow-y: auto; padding:5px; }
@@ -1265,7 +1280,8 @@ canvas#view { width: 100%; height: 100%; display:block; }
 
 /* main logs quote */
 .cqbox { width:100%; margin-top:3px; }
-.cquote { padding:8px; border-radius:10px; display:inline-block; max-width:calc(100% - 40px); margin-bottom:-5px; }
+.cquote { padding:8px; border-radius:10px; display:inline-block; max-width:min(800px, calc(100% - 40px)); margin-bottom:-5px; }
+.ctquote { margin-bottom:0px; }
 .cqwrap { display:table; table-layout:auto; }
 .cqav { display:table-cell; width:24px; vertical-align:top; }
 .cqav img { display:block; width:24px; height:24px; border-radius:50%; }
@@ -1344,6 +1360,12 @@ canvas#view { width: 100%; height: 100%; display:block; }
 .plevel_item img { width:24px; height:24px; border-radius:50%; display:inline-block; vertical-align:middle; margin-right:1px; }
 .plevel_count { font-size:12px; font-weight:bold; padding:0 2px; }
 
+/* profile music */
+.proplayer { width:70px; padding:3px 5px; margin-right:5px; border-radius:100px; cursor:pointer; margin:0 auto; }
+.proplayer_play { width:24px; height:24px; border-radius:50%; display:inline-block; vertical-align:middle; margin-right:1px; }
+.proplayer_beat { width:24px; height:24px; border-radius:50%; display:inline-block; vertical-align:middle; margin:0 5px; }
+.proplayer_btn { width:auto; padding:5px 8px; margin-right:5px; border-radius:100px; cursor:pointer; margin:0 auto; display:inline-block; position:relative; }
+
 /* card level */
 .clevel_item { float:left; padding:3px 5px; margin-right:5px; border-radius:100px; cursor:pointer; }
 .clevel_item img { width:18px; height:18px; border-radius:50%; display:inline-block; vertical-align:middle; margin-right:1px; }
@@ -1357,6 +1379,13 @@ canvas#view { width: 100%; height: 100%; display:block; }
 .splog { padding:15px 10px; }
 .sptext, .tptext { margin-top:2px; }
 .my_notice { padding:3px 8px; display:inline-block; line-height:1em; margin-top:2px; border-radius:10px; font-weight:normal; }
+
+/* notice */
+.boom_notice { padding:15px 12px; border-radius:10px; }
+.boom_notice_spacer { width:10px; }
+.boom_notice_icon { width:24px; }
+.boom_notice_icon img { width:24px; height:24px; border-radius:5px; display:block; }
+.boom_notice_text { font-size:12px; }
 
 /* icon size */
 .tiny_icon { width:16px; height:16px; }
